@@ -83,7 +83,8 @@ add_action( 'customize_register', function( $wp_customize ) {
         'choices' => array(
             'light' => __( 'Light', 'vdglaw-theme-genesis' ),
             'dark' => __( 'Dark', 'vdglaw-theme-genesis' ),
-            'primary' => __( 'Primary', 'vdglaw-theme-genesis' )
+            'primary' => __( 'Primary', 'vdglaw-theme-genesis' ),
+	          'transparent' => __( 'Transparent', 'vdglaw-theme-genesis')
         )
     ) );
 

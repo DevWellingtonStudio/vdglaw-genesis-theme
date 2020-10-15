@@ -19,12 +19,23 @@ function io_front_page_body_class( $classes ) {
 add_action('genesis_after_header', 'add_jumbotron_front_page', 5);
 function add_jumbotron_front_page() {
 	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
+	$jumbotron_title  = get_theme_mod('jumbotron_title');
+	$jumbotron_text   = get_theme_mod('jumbotron_text');
+
 	echo '<div id="fp-parallax-top" class="parallax-window">
-				  <div class="parallax-slider">
-				  <img src="'. $jumbotron_bg_img .'">
-				    <div class="parallax-content">Some Text</div>
+					<div class="parallax-slider">
+					<img src="'. $jumbotron_bg_img .'" style="width:100%;" sizes="100vw">
+					<div class="parallax-content container-fluid">
+					    <div class="row">
+					      <div class="col-md-4 offset-md-5">
+					        <h1>'. $jumbotron_title .'</h1>
+					        <p>'. $jumbotron_text .'</p>
+					        <button class="btn btn-outline-light">CHANGE TO SCHEDULE A CONSULTATION</button>
+					      </div>
+					    </div>
+					  </div>
 				  </div>
-				</div>';
+			 </div>';
 }
 
 
