@@ -3,6 +3,9 @@
  * This file adds the Front Page Template to VDG Law Genesis Theme
  */
 
+remove_action( 'genesis_loop', 'genesis_do_loop' );
+// add a custom loop
+
 
 add_filter( 'body_class', 'io_front_page_body_class' );
 /**
@@ -37,11 +40,6 @@ function add_jumbotron_front_page() {
 				  </div>
 			 </div>';
 }
-
-
-remove_action( 'genesis_loop', 'genesis_do_loop' );
-// add a custom loop
-
 
 
 genesis();

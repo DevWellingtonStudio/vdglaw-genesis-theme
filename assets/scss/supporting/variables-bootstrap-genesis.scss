@@ -1,9 +1,28 @@
 /* Variables
 ------------------------------------------------------------ */
-
 /* Colors */
 $white: #ffffff;
 $black: #000000;
+
+/* Margins / Padding */
+$em1: 1.618em;
+$em2: 2.618em;
+$em3: 3.618em;
+$em4: 4.618em;
+$em5: 5.618em;
+
+
+/* Classes */
+.mt1{
+  margin-top: $em1 !important;
+}
+.mt2 {
+  margin-top: $em2 !important;
+}
+.margin-auto-block {
+  margin: 0 auto;
+  display: block;
+}
 
 $galleryCaptionColor: $figure-caption-color;
 
