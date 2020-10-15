@@ -36,6 +36,13 @@ function bfg_theme_scripts() {
 		// Register theme JS and enqueue it
 		wp_register_script( 'app-js', BFG_THEME_JS . 'app.min.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'app-js' );
+
+		// Parallax
+		wp_register_script('parallax-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array('jquery'), '3.2.1', true);
+		wp_register_script('parallax-min-js', BFG_THEME_JS . 'parallax.min.js', array(), '1.5.0', true);
+
+		wp_enqueue_script('parallax-jquery');
+		wp_enqueue_script('parallax-min-js');
 	}
 }
 

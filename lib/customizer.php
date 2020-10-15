@@ -12,6 +12,9 @@
 */
 
 add_action( 'customize_register', function( $wp_customize ) {
+
+	include 'customizer-sections/jumbotron.php';
+
     // Add Default Settings
     $wp_customize->add_setting( 'vdglaw-theme-genesis', array(
         'capability' => 'edit_theme_options',
