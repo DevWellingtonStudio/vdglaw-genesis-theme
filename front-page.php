@@ -19,16 +19,10 @@ function io_front_page_body_class( $classes ) {
 add_action('genesis_after_header', 'add_jumbotron_front_page', 5);
 function add_jumbotron_front_page() {
 	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
-	/*	echo '<div id="jumbotron-fp" class="jumbotron jumbotron-fluid" style="background-image: url('. $jumbotron_bg_img .');">
-					  <div class="container">
-					    <h1 class="display-4">Fluid jumbotron</h1>
-					    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-					  </div>
-			  	</div>';*/
-
-	echo '<div class="parallax-window">
+	echo '<div id="fp-parallax-top" class="parallax-window">
 				  <div class="parallax-slider">
-				    <img src="'. $jumbotron_bg_img .'" sizes="100vw">
+				  <img src="'. $jumbotron_bg_img .'">
+				    <div class="parallax-content">Some Text</div>
 				  </div>
 				</div>';
 }
