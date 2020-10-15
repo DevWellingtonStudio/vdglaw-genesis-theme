@@ -23,7 +23,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 
     // Add Bootstrap Panel
     $wp_customize->add_panel( 'bootstrap', array(
-        'title' => __( 'Bootstrap for Genesis', 'vdglaw-theme-genesis' ),
+        'title' => __( 'VDG Law Settings', 'vdglaw-theme-genesis' ),
         'priority' => 100
     ) );
 
