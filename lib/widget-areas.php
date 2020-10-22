@@ -26,4 +26,10 @@ function bfg_register_sidebars() {
 		'name' => __( 'Widget #1', 'vdglaw-theme-genesis' ),
 		'description' => __( 'The 1st widget below the hero image - Front/Home page.', 'vdglaw-theme-genesis' )
 	) );
+
+	genesis_register_sidebar( array(
+		'id' => 'widget-two',
+		'name' => __( 'Widget #2', 'vdglaw-theme-genesis' ),
+		'description' => __( 'Use this widget to display two columns of featured pages', 'vdglaw-theme-genesis' )
+	) );
 }

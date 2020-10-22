@@ -49,6 +49,96 @@ function mid_page_slider() {
 		include 'inc/fp-mid-slider.php';
 	}
 }
+add_action('genesis_before_content', 'add_testimonials', 10);
+
+function add_testimonials() {
+	$testimonials_slider1       = get_theme_mod('testislider1');
+	$testimonials_slider1_title = get_theme_mod('testislider1title');
+	$testimonials_slider1_text  = get_theme_mod('testislider1text');
+
+	$testimonials_slider2       = get_theme_mod('testislider2');
+	$testimonials_slider2_title = get_theme_mod('testislider2title');
+	$testimonials_slider2_text  = get_theme_mod('testislider2text');
+
+	$testimonials_slider3       = get_theme_mod('testislider3');
+	$testimonials_slider3_title = get_theme_mod('testislider3title');
+	$testimonials_slider3_text  = get_theme_mod('testislider3text');
+
+	$testimonials_slider4       = get_theme_mod('testislider4');
+	$testimonials_slider4_title = get_theme_mod('testislider4title');
+	$testimonials_slider4_text  = get_theme_mod('testislider4text');
+
+	$testimonials_slider5       = get_theme_mod('testislider5');
+	$testimonials_slider5_title = get_theme_mod('testislider5title');
+	$testimonials_slider5_text  = get_theme_mod('testislider5text');
+
+	$testimonials_slider6       = get_theme_mod('testislider6');
+	$testimonials_slider6_title = get_theme_mod('testislider6title');
+	$testimonials_slider6_text  = get_theme_mod('testislider6text');
+
+	echo '<div id="testimonialIndcators" class="testimonial carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+			    <li data-target="#testimonialIndcators" data-slide-to="0" class="active"></li>
+			    <li data-target="#testimonialIndcators" data-slide-to="1"></li>
+			    <li data-target="#testimonialIndcators" data-slide-to="2"></li>
+			    <li data-target="#testimonialIndcators" data-slide-to="3"></li>
+			    <li data-target="#testimonialIndcators" data-slide-to="4"></li>
+			    <li data-target="#testimonialIndcators" data-slide-to="5"></li>
+			  </ol>
+					<div class="carousel-item active">
+					<img src="'. $testimonials_slider1 .'" alt="vdg law testimonial #1">
+						<div class="carousel-caption d-md-block">
+						<h5>'. $testimonials_slider1_title .'</h5>
+						<p>'. $testimonials_slider1_text .'</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img src="'. $testimonials_slider2 .'" alt="vdg law testimonial #1">
+						<div class="carousel-caption d-md-block">
+						<h5>'. $testimonials_slider2_title .'</h5>
+						<p>'. $testimonials_slider2_text .'</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img src="'. $testimonials_slider3 .'" alt="vdg law testimonial #1">
+						<div class="carousel-caption d-md-block">
+						<h5>'. $testimonials_slider3_title .'</h5>
+						<p>'. $testimonials_slider3_text .'</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img src="'. $testimonials_slider4 .'" alt="vdg law testimonial #1">
+						<div class="carousel-caption d-md-block">
+						<h5>'. $testimonials_slider4_title .'</h5>
+						<p>'. $testimonials_slider4_text .'</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img src="'. $testimonials_slider5 .'" alt="vdg law testimonial #1">
+						<div class="carousel-caption d-md-block">
+						<h5>'. $testimonials_slider5_title .'</h5>
+						<p>'. $testimonials_slider5_text .'</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img src="'. $testimonials_slider6 .'" alt="vdg law testimonial #1">
+						<div class="carousel-caption d-md-block">
+						<h5>'. $testimonials_slider6_title .'</h5>
+						<p>'. $testimonials_slider6_text .'</p>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+					</a>
+				</div>';
+}
+
+
 
 
 genesis();
