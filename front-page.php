@@ -52,6 +52,7 @@ function mid_page_slider() {
 add_action('genesis_before_content', 'add_testimonials', 10);
 
 function add_testimonials() {
+	$default = '';
 	$testimonials_slider1       = get_theme_mod('testislider1');
 	$testimonials_slider1_title = get_theme_mod('testislider1title');
 	$testimonials_slider1_text  = get_theme_mod('testislider1text');
@@ -76,68 +77,97 @@ function add_testimonials() {
 	$testimonials_slider6_title = get_theme_mod('testislider6title');
 	$testimonials_slider6_text  = get_theme_mod('testislider6text');
 
-	if($testimonials_slider1 !== '') {
+	if($testimonials_slider1 !== $default) {
 
-		echo '<div id="testimonialIndcators" class="testimonial carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-			    <li data-target="#testimonialIndcators" data-slide-to="0" class="active"></li>
-			    <li data-target="#testimonialIndcators" data-slide-to="1"></li>
-			    <li data-target="#testimonialIndcators" data-slide-to="2"></li>
-			    <li data-target="#testimonialIndcators" data-slide-to="3"></li>
-			    <li data-target="#testimonialIndcators" data-slide-to="4"></li>
-			    <li data-target="#testimonialIndcators" data-slide-to="5"></li>
-			  </ol>
-					<div class="carousel-item active">
-					<img src="' . $testimonials_slider1 . '" alt="vdg law testimonial #1">
-						<div class="carousel-caption d-md-block">
-						<h5>' . $testimonials_slider1_title . '</h5>
-						<p>' . $testimonials_slider1_text . '</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-					<img src="' . $testimonials_slider2 . '" alt="vdg law testimonial #1">
-						<div class="carousel-caption d-md-block">
-						<h5>' . $testimonials_slider2_title . '</h5>
-						<p>' . $testimonials_slider2_text . '</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-					<img src="' . $testimonials_slider3 . '" alt="vdg law testimonial #1">
-						<div class="carousel-caption d-md-block">
-						<h5>' . $testimonials_slider3_title . '</h5>
-						<p>' . $testimonials_slider3_text . '</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-					<img src="' . $testimonials_slider4 . '" alt="vdg law testimonial #1">
-						<div class="carousel-caption d-md-block">
-						<h5>' . $testimonials_slider4_title . '</h5>
-						<p>' . $testimonials_slider4_text . '</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-					<img src="' . $testimonials_slider5 . '" alt="vdg law testimonial #1">
-						<div class="carousel-caption d-md-block">
-						<h5>' . $testimonials_slider5_title . '</h5>
-						<p>' . $testimonials_slider5_text . '</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-					<img src="' . $testimonials_slider6 . '" alt="vdg law testimonial #1">
-						<div class="carousel-caption d-md-block">
-						<h5>' . $testimonials_slider6_title . '</h5>
-						<p>' . $testimonials_slider6_text . '</p>
-						</div>
-					</div>
-					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-					</a>
-				</div>';
+		echo '<div id="testimonialIndcators" class="testimonial carousel slide carousel-fade" data-ride="carousel">
+					<ol class="carousel-indicators">';
+				    if($testimonials_slider2 !== $default) {
+							echo '<li data-target="#testimonialIndcators" data-slide-to="0" class="active"></li>
+										<li data-target="#testimonialIndcators" data-slide-to="1"></li>';
+						}
+						if($testimonials_slider3 !== $default) {
+							echo '<li data-target="#testimonialIndcators" data-slide-to="2"></li>';
+						}
+						if($testimonials_slider4 !== $default) {
+							echo '<li data-target="#testimonialIndcators" data-slide-to="3"></li>';
+						}
+						if($testimonials_slider5 !== $default) {
+							echo '<li data-target="#testimonialIndcators" data-slide-to="4"></li>';
+						}
+						if($testimonials_slider6 !== $default) {
+							echo '<li data-target="#testimonialIndcators" data-slide-to="5"></li>';
+						}
+				  echo '</ol>
+								<div class="carousel-item active">
+								<img src="' . $testimonials_slider1 . '" alt="vdg law testimonial #1">
+									<div class="carousel-caption d-md-block">
+									<h5>' . $testimonials_slider1_title . '</h5>
+									<p>' . $testimonials_slider1_text . '</p>
+									</div>
+								</div>';
+
+					if($testimonials_slider2 !== $default) {
+
+						echo '<div class="carousel-item" >
+									<img src = "' . $testimonials_slider2 . '" alt = "vdg law testimonial #1">
+										<div class="carousel-caption d-md-block">
+										<h5> ' . $testimonials_slider2_title . '</h5>
+										<p> ' . $testimonials_slider2_text . '</p>
+										</div>
+									</div>';
+					}
+
+					if($testimonials_slider3 !== $default) {
+						echo '<div class="carousel-item" >
+									<img src = "' . $testimonials_slider3 . '" alt = "vdg law testimonial #1" >
+										<div class="carousel-caption d-md-block" >
+										<h5> ' . $testimonials_slider3_title . '</h5 >
+										<p> ' . $testimonials_slider3_text . '</p >
+										</div>
+									</div>';
+					}
+
+					if($testimonials_slider4 !== $default) {
+						echo '<div class="carousel-item">
+									<img src="' . $testimonials_slider4 . '" alt="vdg law testimonial #1">
+										<div class="carousel-caption d-md-block">
+										<h5>' . $testimonials_slider4_title . '</h5>
+										<p>' . $testimonials_slider4_text . '</p>
+										</div>
+									</div>';
+					}
+
+					if($testimonials_slider5 !== $default) {
+						echo '<div class="carousel-item">
+									<img src="' . $testimonials_slider5 . '" alt="vdg law testimonial #1">
+										<div class="carousel-caption d-md-block">
+										<h5>' . $testimonials_slider5_title . '</h5>
+										<p>' . $testimonials_slider5_text . '</p>
+										</div>
+									</div>';
+					}
+
+					if($testimonials_slider6 !== $default) {
+						echo '<div class="carousel-item">
+									<img src="' . $testimonials_slider6 . '" alt="vdg law testimonial #1">
+										<div class="carousel-caption d-md-block">
+										<h5>' . $testimonials_slider6_title . '</h5>
+										<p>' . $testimonials_slider6_text . '</p>
+										</div>
+									</div>';
+					}
+
+					if($testimonials_slider2 !== $default) {
+						echo '<a class="carousel-control-prev" href="#testimonialIndcators" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="#testimonialIndcators" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+									</a>';
+					}
+						echo	'</div>';
 	}
 }
 
