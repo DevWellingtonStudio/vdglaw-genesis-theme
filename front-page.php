@@ -76,7 +76,9 @@ function add_testimonials() {
 	$testimonials_slider6_title = get_theme_mod('testislider6title');
 	$testimonials_slider6_text  = get_theme_mod('testislider6text');
 
-	echo '<div id="testimonialIndcators" class="testimonial carousel slide" data-ride="carousel">
+	if($testimonials_slider1 !== '') {
+
+		echo '<div id="testimonialIndcators" class="testimonial carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 			    <li data-target="#testimonialIndcators" data-slide-to="0" class="active"></li>
 			    <li data-target="#testimonialIndcators" data-slide-to="1"></li>
@@ -86,45 +88,45 @@ function add_testimonials() {
 			    <li data-target="#testimonialIndcators" data-slide-to="5"></li>
 			  </ol>
 					<div class="carousel-item active">
-					<img src="'. $testimonials_slider1 .'" alt="vdg law testimonial #1">
+					<img src="' . $testimonials_slider1 . '" alt="vdg law testimonial #1">
 						<div class="carousel-caption d-md-block">
-						<h5>'. $testimonials_slider1_title .'</h5>
-						<p>'. $testimonials_slider1_text .'</p>
+						<h5>' . $testimonials_slider1_title . '</h5>
+						<p>' . $testimonials_slider1_text . '</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-					<img src="'. $testimonials_slider2 .'" alt="vdg law testimonial #1">
+					<img src="' . $testimonials_slider2 . '" alt="vdg law testimonial #1">
 						<div class="carousel-caption d-md-block">
-						<h5>'. $testimonials_slider2_title .'</h5>
-						<p>'. $testimonials_slider2_text .'</p>
+						<h5>' . $testimonials_slider2_title . '</h5>
+						<p>' . $testimonials_slider2_text . '</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-					<img src="'. $testimonials_slider3 .'" alt="vdg law testimonial #1">
+					<img src="' . $testimonials_slider3 . '" alt="vdg law testimonial #1">
 						<div class="carousel-caption d-md-block">
-						<h5>'. $testimonials_slider3_title .'</h5>
-						<p>'. $testimonials_slider3_text .'</p>
+						<h5>' . $testimonials_slider3_title . '</h5>
+						<p>' . $testimonials_slider3_text . '</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-					<img src="'. $testimonials_slider4 .'" alt="vdg law testimonial #1">
+					<img src="' . $testimonials_slider4 . '" alt="vdg law testimonial #1">
 						<div class="carousel-caption d-md-block">
-						<h5>'. $testimonials_slider4_title .'</h5>
-						<p>'. $testimonials_slider4_text .'</p>
+						<h5>' . $testimonials_slider4_title . '</h5>
+						<p>' . $testimonials_slider4_text . '</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-					<img src="'. $testimonials_slider5 .'" alt="vdg law testimonial #1">
+					<img src="' . $testimonials_slider5 . '" alt="vdg law testimonial #1">
 						<div class="carousel-caption d-md-block">
-						<h5>'. $testimonials_slider5_title .'</h5>
-						<p>'. $testimonials_slider5_text .'</p>
+						<h5>' . $testimonials_slider5_title . '</h5>
+						<p>' . $testimonials_slider5_text . '</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-					<img src="'. $testimonials_slider6 .'" alt="vdg law testimonial #1">
+					<img src="' . $testimonials_slider6 . '" alt="vdg law testimonial #1">
 						<div class="carousel-caption d-md-block">
-						<h5>'. $testimonials_slider6_title .'</h5>
-						<p>'. $testimonials_slider6_text .'</p>
+						<h5>' . $testimonials_slider6_title . '</h5>
+						<p>' . $testimonials_slider6_text . '</p>
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -136,6 +138,7 @@ function add_testimonials() {
 					<span class="sr-only">Next</span>
 					</a>
 				</div>';
+	}
 }
 
 
