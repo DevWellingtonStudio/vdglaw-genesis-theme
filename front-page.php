@@ -171,6 +171,33 @@ function add_testimonials() {
 	}
 }
 
+add_action( 'genesis_before_content', 'add_jumbotron_mid_front_page', 20 );
+function add_jumbotron_mid_front_page() {
+	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
+	$jumbotron_title  = get_theme_mod('jumbotron_title');
+	$jumbotron_text = get_theme_mod('jumbotron_text');
+
+	echo '
+
+	<div id="mid-page-jumbotron">
+	<div class="mid-page jumbotron">
+
+	<picture >
+		<source media="(min-width:800px)" srcset="'. $jumbotron_bg_img .'">
+		<img src="'. $jumbotron_bg_img .'" alt="vdg law" class="jumbotron__background">
+	</picture>
+
+  <div class="container text-white">
+    <h1 class="display-4">'. $jumbotron_title .'</h1>
+    <p class="lead">'. $jumbotron_text .'</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
+  </div>
+</div>
+</div>
+
+
+	';
+}
 
 
 

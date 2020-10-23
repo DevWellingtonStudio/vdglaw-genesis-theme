@@ -32,4 +32,10 @@ function bfg_register_sidebars() {
 		'name' => __( 'Widget #2', 'vdglaw-theme-genesis' ),
 		'description' => __( 'Use this widget to display two columns of featured pages', 'vdglaw-theme-genesis' )
 	) );
+
+	genesis_register_sidebar( array(
+		'id' => 'widget-three',
+		'name' => __( 'Widget #3', 'vdglaw-theme-genesis' ),
+		'description' => __( 'Use this widget to display content just above the footer', 'vdglaw-theme-genesis' )
+	) );
 }

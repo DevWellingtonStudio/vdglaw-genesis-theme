@@ -42,6 +42,7 @@ function bfg_do_meta() {
 	if ( is_front_page() && is_active_sidebar( 'home-featured' ) ) add_action( 'genesis_header', 'bfg_do_home_featured' );
 	if ( is_front_page() && is_active_sidebar( 'widget-one' ) ) add_action( 'genesis_after_header', 'bfg_do_widget_one', 15 );
 	if ( is_front_page() && is_active_sidebar( 'widget-two' ) ) add_action( 'genesis_before_content', 'bfg_do_widget_two', 5 );
+	if ( is_front_page() && is_active_sidebar( 'widget-three' ) ) add_action( 'genesis_before_footer', 'bfg_do_widget_three', 5 );
 
 	// Body Class
 	add_filter( 'body_class', 'bfg_body_class' );
@@ -109,6 +110,27 @@ function bfg_do_widget_two() {
 	genesis_markup( array(
 		'close' => '</div>',
 		'context' => 'widget-two'
+	) );
+}
+
+function bfg_do_widget_three() {
+	genesis_markup( array(
+		'open' => '<div %s>',
+		'context' => 'widget-three'
+	) );
+
+	genesis_structural_wrap( 'widget-three' );
+
+	genesis_widget_area( 'widget-three', array(
+		'before' => '',
+		'after' => ''
+	) );
+
+	genesis_structural_wrap( 'widget-three', 'close' );
+
+	genesis_markup( array(
+		'close' => '</div>',
+		'context' => 'widget-three'
 	) );
 }
 
