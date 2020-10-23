@@ -5,3 +5,22 @@
   margin-top: $em3;
   padding: 0;
 }
+
+.page-template-default.page,
+.page-template-default.post {
+  .site-container {
+	.site-inner {
+	  .wrap {
+		.content-sidebar-wrap {
+		  main {
+			article {
+			  width: 70%;
+			  margin: 0 auto;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
