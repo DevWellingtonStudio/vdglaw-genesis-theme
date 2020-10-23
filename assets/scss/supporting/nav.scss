@@ -1,5 +1,16 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
+.navbar-clear.bg-clear {
+  background-color: transparent;
+  transition: 1s;
+  .wrap {
+	a img {
+	  width: 80px;
+	  height: auto;
+	  transition: 1s;
+	}
+  }
+}
 .post-template-default.single {
   .site-container {
 	.site-header {
@@ -16,6 +27,11 @@
 		.wrap {
 		  .navbar-brand {
 			background-color: $white;
+			border-radius: 10%;
+			img {
+			  width: 40px;
+			  transition: 1s;
+			}
 		  }
 		  #nav-primary {
 			ul li a {
@@ -44,6 +60,11 @@
 		.wrap {
 		  .navbar-brand {
 			background-color: $white;
+			border-radius: 10%;
+			img {
+			  width: 40px;
+			  transition: 1s;
+			}
 		  }
 		  #nav-primary {
 			ul li a {
@@ -65,6 +86,11 @@
 	.wrap {
 	  .navbar-brand {
 		background-color: $white;
+		border-radius: 10%;
+		img {
+		  width: 40px;
+		  transition: 1s;
+		}
 	  }
 	  #nav-primary {
 		ul li a {
