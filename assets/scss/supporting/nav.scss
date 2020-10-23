@@ -1,11 +1,71 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
+.post-template-default.single {
+  .site-container {
+	.site-header {
+	  .nav-primary {
+		.wrap {
+		  #nav-primary {
+			ul li a {
+			  color: $black;
+			}
+		  }
+		}
+	  }
+	  .bg-clear.scrolled {
+		.wrap {
+		  .navbar-brand {
+			background-color: $white;
+		  }
+		  #nav-primary {
+			ul li a {
+			  color: $white;
+			  transition: 1s;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+.blog {
+  .site-container {
+	.site-header {
+	  .nav-primary {
+		.wrap {
+		  #nav-primary {
+			ul li a {
+			  color: $black;
+			}
+		  }
+		}
+	  }
+	  .bg-clear.scrolled {
+		.wrap {
+		  .navbar-brand {
+			background-color: $white;
+		  }
+		  #nav-primary {
+			ul li a {
+			  color: $white;
+			  transition: 1s;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
 .page-template-default {
   .navbar-clear .navbar-nav .nav-link {
 	color: $black;
   }
   .bg-clear.scrolled {
 	.wrap {
+	  .navbar-brand {
+		background-color: $white;
+	  }
 	  #nav-primary {
 		ul li a {
 		  color: $white;

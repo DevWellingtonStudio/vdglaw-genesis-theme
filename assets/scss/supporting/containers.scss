@@ -1,6 +1,41 @@
 /** SCSS Containers
 ----------------------------------- */
-
+.post-template-default.single {
+  .site-container {
+	.wrap {
+	  .content-sidebar-wrap {
+		main {
+		  .archive-description {
+			width: 70%;
+			margin: auto;
+		  }
+		  article {
+			width: 70%;
+			margin: 0 auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+.blog {
+  .site-container {
+	.wrap {
+	  .content-sidebar-wrap {
+		main {
+		  .archive-description {
+			width: 70%;
+			margin: auto;
+		  }
+		  article {
+			width: 70%;
+			margin: 0 auto;
+		  }
+		}
+	  }
+	}
+  }
+}
 .container-fluid.mid-slider-container {
   margin-top: $em3;
   padding: 0;
