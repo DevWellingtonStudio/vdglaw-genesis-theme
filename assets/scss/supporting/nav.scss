@@ -14,8 +14,8 @@
 
 .navbar {
     padding: {
-        left: 0;
-        right: 0;
+        left: .8em;
+        right: .8em;
     }
 }
 
@@ -26,4 +26,30 @@
 .bg-clear.scrolled {
   background-color: $black !important;
   transition: 1s;
+  .wrap {
+	button {
+	  .navbar-toggler-icon {
+		.fa-bars {
+		  color: $white;
+		}
+	  }
+	}
+  }
+}
+
+.navbar-toggler-icon {
+  height: 1.7em;
+}
+
+.navbar-collapse.collapse.show {
+  background-color: $black;
+  padding: $em1;
+}
+.navbar-nav.sm-collapsible .sub-arrow {
+  right: auto;
+  left: 200px;
+}
+.navbar-nav.ml-auto.sm-collapsible {
+  width: 55%;
+  margin: 0 auto;
 }

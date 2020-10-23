@@ -28,9 +28,9 @@ function add_jumbotron_front_page() {
 	echo '<div id="fp-parallax-top" class="parallax-window">
 					<div class="parallax-slider">
 					<img src="'. $jumbotron_bg_img .'" style="width:100%;" sizes="100vw">
-					<div class="parallax-content container-fluid">
+					<div class="parallax-content container">
 					    <div class="row">
-					      <div class="col-md-4 offset-md-5">
+					      <div class="col-md-4 offset-md-5 col-sm-8 col-xs-6">
 					        <h1>'. $jumbotron_title .'</h1>
 					        <p>'. $jumbotron_text .'</p>
 					        <button class="btn btn-outline-light">CHANGE TO SCHEDULE A CONSULTATION</button>
