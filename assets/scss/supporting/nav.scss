@@ -1,11 +1,5 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
-.front-page {
-  .navbar-clear .navbar-nav .nav-link {
-	color: $white;
-  }
-}
-
 .page-template-default {
   .navbar-clear .navbar-nav .nav-link {
 	color: $black;
@@ -74,4 +68,10 @@
 .navbar-nav.ml-auto.sm-collapsible {
   width: 55%;
   margin: 0 auto;
+}
+
+.front-page {
+  .navbar-clear .navbar-nav .nav-link {
+	color: $white;
+  }
 }
