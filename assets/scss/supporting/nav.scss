@@ -1,5 +1,23 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
+
+.page-template-default {
+  .navbar-clear .navbar-nav .nav-link {
+	color: $black;
+  }
+
+  .bg-clear.scrolled {
+	.wrap {
+	  #nav-primary {
+		ul li a {
+		  color: $white;
+		  transition: 1s;
+		}
+	  }
+	}
+  }
+}
+
 .no-js .menu-item-has-children:hover .dropdown-menu,
 .no-js .menu-item-has-children:focus .dropdown-menu {
     display: block;
