@@ -1,5 +1,10 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
+.front-page {
+  .navbar-clear .navbar-nav .nav-link {
+	color: $white;
+  }
+}
 
 .page-template-default {
   .navbar-clear .navbar-nav .nav-link {
