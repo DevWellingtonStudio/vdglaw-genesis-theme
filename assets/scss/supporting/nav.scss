@@ -1,5 +1,107 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
+.navbar-clear.bg-clear {
+  background-color: transparent;
+  transition: 1s;
+  .wrap {
+	a img {
+	  width: 80px;
+	  height: auto;
+	  transition: 1s;
+	}
+  }
+}
+.post-template-default.single {
+  .site-container {
+	.site-header {
+	  .nav-primary {
+		.wrap {
+		  #nav-primary {
+			ul li a {
+			  color: $black;
+			}
+		  }
+		}
+	  }
+	  .bg-clear.scrolled {
+		.wrap {
+		  .navbar-brand {
+			background-color: $white;
+			border-radius: 10%;
+			img {
+			  width: 40px;
+			  transition: 1s;
+			}
+		  }
+		  #nav-primary {
+			ul li a {
+			  color: $white;
+			  transition: 1s;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+.blog {
+  .site-container {
+	.site-header {
+	  .nav-primary {
+		.wrap {
+		  #nav-primary {
+			ul li a {
+			  color: $black;
+			}
+		  }
+		}
+	  }
+	  .bg-clear.scrolled {
+		.wrap {
+		  .navbar-brand {
+			background-color: $white;
+			border-radius: 10%;
+			img {
+			  width: 40px;
+			  transition: 1s;
+			}
+		  }
+		  #nav-primary {
+			ul li a {
+			  color: $white;
+			  transition: 1s;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
+.page-template-default {
+  .navbar-clear .navbar-nav .nav-link {
+	color: $black;
+  }
+  .bg-clear.scrolled {
+	.wrap {
+	  .navbar-brand {
+		background-color: $white;
+		border-radius: 10%;
+		img {
+		  width: 40px;
+		  transition: 1s;
+		}
+	  }
+	  #nav-primary {
+		ul li a {
+		  color: $white;
+		  transition: 1s;
+		}
+	  }
+	}
+  }
+}
+
 .no-js .menu-item-has-children:hover .dropdown-menu,
 .no-js .menu-item-has-children:focus .dropdown-menu {
     display: block;
@@ -14,7 +116,48 @@
 
 .navbar {
     padding: {
-        left: 0;
-        right: 0;
+        left: .8em;
+        right: .8em;
     }
+}
+
+.navbar-clear .navbar-nav .nav-link {
+  color: hsla(360, 100%, 100%, 1);
+}
+
+.bg-clear.scrolled {
+  background-color: $black !important;
+  transition: 1s;
+  .wrap {
+	button {
+	  .navbar-toggler-icon {
+		.fa-bars {
+		  color: $white;
+		}
+	  }
+	}
+  }
+}
+
+.navbar-toggler-icon {
+  height: 1.7em;
+}
+
+.navbar-collapse.collapse.show {
+  background-color: $black;
+  padding: $em1;
+}
+.navbar-nav.sm-collapsible .sub-arrow {
+  right: auto;
+  left: 200px;
+}
+.navbar-nav.ml-auto.sm-collapsible {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.front-page {
+  .navbar-clear .navbar-nav .nav-link {
+	color: $white;
+  }
 }

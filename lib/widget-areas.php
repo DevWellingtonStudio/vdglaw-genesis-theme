@@ -20,4 +20,22 @@ function bfg_register_sidebars() {
 		'name' => __( 'Home Featured', 'vdglaw-theme-genesis' ),
 		'description' => __( 'This is the home featured area. It uses the jumbotron bootstrap section.', 'vdglaw-theme-genesis' )
 	) );
+
+	genesis_register_sidebar( array(
+		'id' => 'widget-one',
+		'name' => __( 'Widget #1', 'vdglaw-theme-genesis' ),
+		'description' => __( 'The 1st widget below the hero image - Front/Home page.', 'vdglaw-theme-genesis' )
+	) );
+
+	genesis_register_sidebar( array(
+		'id' => 'widget-two',
+		'name' => __( 'Widget #2', 'vdglaw-theme-genesis' ),
+		'description' => __( 'Use this widget to display two columns of featured pages', 'vdglaw-theme-genesis' )
+	) );
+
+	genesis_register_sidebar( array(
+		'id' => 'widget-three',
+		'name' => __( 'Widget #3', 'vdglaw-theme-genesis' ),
+		'description' => __( 'Use this widget to display content just above the footer', 'vdglaw-theme-genesis' )
+	) );
 }

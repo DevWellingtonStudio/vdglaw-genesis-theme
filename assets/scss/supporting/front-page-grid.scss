@@ -1,0 +1,51 @@
+/** SCSS Front Page Grid
+---------------------------------------------- */
+
+.widget-two {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+  section.featured-content {
+	width: 50%;
+	float: left;
+	padding: 1.618em;
+
+	article {
+	  border: none !important;
+	  background-color: $lightgray;
+	  header {
+		text-align: center;
+		padding: 4em 4em 0;
+	  }
+	  .entry-content {
+		padding: 0 4em 4em 4em;
+		text-align: center;
+		p {
+		  padding: $em1;
+		}
+	  }
+	}
+	img {
+	  min-height: 300px;
+	  max-height: 300px;
+	  object-fit: cover;
+	}
+  }
+}
+
+.fpa-more-link {
+  text-align: center;
+  width: 55%;
+  margin: 0 auto;
+  a {
+	border: 1.2px solid $black;
+	padding: 1em 2em;
+	color: $black;
+	text-decoration: none;
+  }
+}
+.hr {
+  width: 50px;
+  border: 2px solid red;
+  margin: 2em auto 3em auto;
+}

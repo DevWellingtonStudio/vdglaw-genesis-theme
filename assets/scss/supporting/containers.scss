@@ -1,0 +1,63 @@
+/** SCSS Containers
+----------------------------------- */
+.post-template-default.single {
+  .site-container {
+	.wrap {
+	  .content-sidebar-wrap {
+		main {
+		  .archive-description {
+			width: 70%;
+			margin: auto;
+		  }
+		  article {
+			width: 70%;
+			margin: 0 auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+.blog {
+  .site-container {
+	.wrap {
+	  .content-sidebar-wrap {
+		main {
+		  .archive-description {
+			width: 70%;
+			margin: auto;
+		  }
+		  article {
+			width: 70%;
+			margin: 0 auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+.container-fluid.mid-slider-container {
+  margin-top: $em3;
+  padding: 0;
+}
+.narrow-content {
+  width: 70%;
+  margin: 0 auto;
+}
+.page-template-default.page,
+.page-template-default.post {
+  .site-container {
+	.site-inner {
+	  .wrap {
+		.content-sidebar-wrap {
+		  main {
+			article {
+			  margin: 0 auto;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+

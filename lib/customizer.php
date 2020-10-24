@@ -12,6 +12,11 @@
 */
 
 add_action( 'customize_register', function( $wp_customize ) {
+
+	include 'customizer-sections/jumbotron.php';
+	include 'customizer-sections/fp-mid-slider-options.php';
+	include 'customizer-sections/testimonials-customizer.php';
+
     // Add Default Settings
     $wp_customize->add_setting( 'vdglaw-theme-genesis', array(
         'capability' => 'edit_theme_options',
@@ -20,7 +25,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 
     // Add Bootstrap Panel
     $wp_customize->add_panel( 'bootstrap', array(
-        'title' => __( 'Bootstrap for Genesis', 'vdglaw-theme-genesis' ),
+        'title' => __( 'VDG Law Settings', 'vdglaw-theme-genesis' ),
         'priority' => 100
     ) );
 
@@ -80,7 +85,9 @@ add_action( 'customize_register', function( $wp_customize ) {
         'choices' => array(
             'light' => __( 'Light', 'vdglaw-theme-genesis' ),
             'dark' => __( 'Dark', 'vdglaw-theme-genesis' ),
-            'primary' => __( 'Primary', 'vdglaw-theme-genesis' )
+            'primary' => __( 'Primary', 'vdglaw-theme-genesis' ),
+	          'transparent' => __( 'Transparent', 'vdglaw-theme-genesis'),
+	          'black' => __('Black', 'vdglaw-theme-genesis')
         )
     ) );
 
@@ -143,7 +150,8 @@ add_action( 'customize_register', function( $wp_customize ) {
         'choices' => array(
             'light' => __( 'Light', 'vdglaw-theme-genesis' ),
             'dark' => __( 'Dark', 'vdglaw-theme-genesis' ),
-            'primary' => __( 'Primary', 'vdglaw-theme-genesis' )
+            'primary' => __( 'Primary', 'vdglaw-theme-genesis' ),
+	          'black' => __('Black', 'vdglaw-theme-genesis')
         )
     ) );
 
@@ -159,7 +167,9 @@ add_action( 'customize_register', function( $wp_customize ) {
         'choices' => array(
             'light' => __( 'Light', 'vdglaw-theme-genesis' ),
             'dark' => __( 'Dark', 'vdglaw-theme-genesis' ),
-            'primary' => __( 'Primary', 'vdglaw-theme-genesis' )
+            'primary' => __( 'Primary', 'vdglaw-theme-genesis' ),
+            'black' => __('Black', 'vdglaw-theme-genesis')
+
         )
     ) );
 } );

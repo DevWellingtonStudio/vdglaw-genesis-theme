@@ -1,11 +1,19 @@
 /* Site Inner
 ----------------------------------------------------------------------------- */
 .site-inner {
-    padding: $spacer*4 0;
+    padding: $spacer*7 0 $spacer*4 0;
     .content {
         margin-bottom: $spacer;
         @include media-breakpoint-up(sm) {
             margin-bottom: 0;
         }
     }
+}
+
+.home {
+  .site-container {
+	.site-inner {
+	  padding: $spacer*4 0 0 0;
+	}
+  }
 }
