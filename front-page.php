@@ -189,10 +189,14 @@ function add_jumbotron_mid_front_page() {
 		<img src="'. $jumbotron_bg_img .'" alt="vdg law" class="jumbotron__background">
 	</picture>
 
-  <div class="container text-white">
-    <h1 class="display-4">'. $jumbotron_title .'</h1>
-    <p class="lead">'. $jumbotron_text .'</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
+  <div id="fp-mid-jumbotron-cta" class="container text-white">
+  	<div class="row">
+			<div class="content-container col-lg-5 offset-lg-6">
+			<h1 class="display-4">'. $jumbotron_title .'</h1>
+			<p class="lead">'. $jumbotron_text .'</p>
+			<button class="btn btn-outline-light">LEARN MORE</button>
+			</div>
+    </div>
   </div>
 </div>
 </div>
