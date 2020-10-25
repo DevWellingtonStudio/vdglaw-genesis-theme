@@ -102,7 +102,7 @@ function add_testimonials() {
 				  echo '</ol>
 								<div class="carousel-item active">
 								<img src="' . $testimonials_slider1 . '" alt="vdg law testimonial #1">
-									<div class="carousel-caption d-md-block">
+									<div class="carousel-caption">
 									<h5>' . $testimonials_slider1_title . '</h5>
 									<p>' . $testimonials_slider1_text . '</p>
 									</div>
@@ -112,7 +112,7 @@ function add_testimonials() {
 
 						echo '<div class="carousel-item" >
 									<img src = "' . $testimonials_slider2 . '" alt = "vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5> ' . $testimonials_slider2_title . '</h5>
 										<p> ' . $testimonials_slider2_text . '</p>
 										</div>
@@ -122,7 +122,7 @@ function add_testimonials() {
 					if($testimonials_slider3 !== $default) {
 						echo '<div class="carousel-item" >
 									<img src = "' . $testimonials_slider3 . '" alt = "vdg law testimonial #1" >
-										<div class="carousel-caption d-md-block" >
+										<div class="carousel-caption" >
 										<h5> ' . $testimonials_slider3_title . '</h5 >
 										<p> ' . $testimonials_slider3_text . '</p >
 										</div>
@@ -132,7 +132,7 @@ function add_testimonials() {
 					if($testimonials_slider4 !== $default) {
 						echo '<div class="carousel-item">
 									<img src="' . $testimonials_slider4 . '" alt="vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5>' . $testimonials_slider4_title . '</h5>
 										<p>' . $testimonials_slider4_text . '</p>
 										</div>
@@ -142,7 +142,7 @@ function add_testimonials() {
 					if($testimonials_slider5 !== $default) {
 						echo '<div class="carousel-item">
 									<img src="' . $testimonials_slider5 . '" alt="vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5>' . $testimonials_slider5_title . '</h5>
 										<p>' . $testimonials_slider5_text . '</p>
 										</div>
@@ -152,7 +152,7 @@ function add_testimonials() {
 					if($testimonials_slider6 !== $default) {
 						echo '<div class="carousel-item">
 									<img src="' . $testimonials_slider6 . '" alt="vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5>' . $testimonials_slider6_title . '</h5>
 										<p>' . $testimonials_slider6_text . '</p>
 										</div>
