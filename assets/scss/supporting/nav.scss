@@ -143,6 +143,11 @@
   height: 1.7em;
 }
 
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
 .navbar-collapse.collapse.show {
   background-color: $black;
   padding: $em1;
