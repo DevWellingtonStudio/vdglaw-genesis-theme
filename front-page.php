@@ -19,28 +19,16 @@ function io_front_page_body_class( $classes ) {
 	return $classes;
 }
 
-add_action('genesis_after_header', 'add_jumbotron_front_page', 5);
-function add_jumbotron_front_page() {
-	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
-	$jumbotron_title  = get_theme_mod('jumbotron_title');
-	$jumbotron_text   = get_theme_mod('jumbotron_text');
+// Adds Top Section/Hero Parallax Section
+$parallaxbgimg = get_theme_mod('parallax_bg_img', '');
+if($parallaxbgimg !== '') {
+include 'inc/parallax-top.php';
+}
 
-	echo '<div id="fp-parallax-top" class="parallax-window">
-					<div class="parallax-slider">
-					<img src="'. $jumbotron_bg_img .'" style="width:100%;" srcset="/img/hero-576x314.png 39vw, /img/hero-768x418.png 52vw, /img/hero-991x540.png 72vw, /img/hero-1200x654.png 87vw" sizes="100vw">
-					<div class="parallax-content container">
-					    <div class="row">
-					      <div class="text-btn-content col-lg-6 offset-lg-4 offset-xl-5">
-									<div class="card">
-										<h1>'. $jumbotron_title .'</h1>
-										<p>'. $jumbotron_text .'</p>
-									 </div>
-					        <button class="btn btn-outline-light">CHANGE TO SCHEDULE A CONSULTATION</button>
-					      </div>
-					    </div>
-					  </div>
-				  </div>
-			 </div>';
+// Adds Jumbotron CTA
+$jumbotronbgimg = get_theme_mod('jumbotron_bg_img', '');
+if($jumbotronbgimg !== '') {
+	include 'inc/jumbotron-cta.php';
 }
 
 // Ads Mid Page Slider
@@ -172,39 +160,5 @@ function add_testimonials() {
 						echo	'</div>';
 	}
 }
-
-add_action( 'genesis_before_content', 'add_jumbotron_mid_front_page', 20 );
-function add_jumbotron_mid_front_page() {
-	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
-	$jumbotron_title  = get_theme_mod('jumbotron_title');
-	$jumbotron_text = get_theme_mod('jumbotron_text');
-
-	echo '
-
-	<div id="mid-page-jumbotron">
-	<div class="mid-page jumbotron">
-
-	<picture >
-		<source media="(min-width:800px)" srcset="'. $jumbotron_bg_img .'">
-		<img src="'. $jumbotron_bg_img .'" alt="vdg law" class="jumbotron__background">
-	</picture>
-
-  <div id="fp-mid-jumbotron-cta" class="container text-white">
-  	<div class="row">
-			<div class="content-container col-lg-5 offset-lg-6">
-			<h1 class="display-4">'. $jumbotron_title .'</h1>
-			<p class="lead">'. $jumbotron_text .'</p>
-			<button class="btn btn-outline-light">LEARN MORE</button>
-			</div>
-    </div>
-  </div>
-</div>
-</div>
-
-
-	';
-}
-
-
 
 genesis();

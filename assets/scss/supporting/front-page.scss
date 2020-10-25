@@ -1,7 +1,9 @@
 /** SCSS Front Page
 ---------------------------- */
 
-
+.parallax-mirror {
+  z-index: 1 !important;
+}
 
 .parallax-window {
   min-height: 1046px;
@@ -24,19 +26,25 @@
   left: 65%;
   transform: translate(-50%, -50%);
   transition: .5s;
-  .card {
-	background-color: transparent;
-	border: none;
+  .row {
+	.text-btn-content {
+		.card {
+		  background-color: transparent;
+		  border: none;
+
+		  h1 {
+			color: $white;
+			transition: .5s;
+		  }
+
+		  p {
+			color: $white;
+			transition: .5s;
+		  }
+		}
+	  }
+	}
   }
-  h1 {
-	color: $white;
-	transition: .5s;
-  }
-  p {
-	color: $white;
-	transition: .5s;
-  }
-}
 .testimonial.carousel.slide {
   .carousel-item:after {
 	content: '\A';
