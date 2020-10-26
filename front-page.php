@@ -19,26 +19,16 @@ function io_front_page_body_class( $classes ) {
 	return $classes;
 }
 
-add_action('genesis_after_header', 'add_jumbotron_front_page', 5);
-function add_jumbotron_front_page() {
-	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
-	$jumbotron_title  = get_theme_mod('jumbotron_title');
-	$jumbotron_text   = get_theme_mod('jumbotron_text');
+// Adds Top Section/Hero Parallax Section
+$parallaxbgimg = get_theme_mod('parallax_bg_img', '');
+if($parallaxbgimg !== '') {
+include 'inc/parallax-top.php';
+}
 
-	echo '<div id="fp-parallax-top" class="parallax-window">
-					<div class="parallax-slider">
-					<img src="'. $jumbotron_bg_img .'" style="width:100%;" sizes="100vw">
-					<div class="parallax-content container">
-					    <div class="row">
-					      <div class="col-md-4 offset-md-5 col-sm-8 col-xs-6">
-					        <h1>'. $jumbotron_title .'</h1>
-					        <p>'. $jumbotron_text .'</p>
-					        <button class="btn btn-outline-light">CHANGE TO SCHEDULE A CONSULTATION</button>
-					      </div>
-					    </div>
-					  </div>
-				  </div>
-			 </div>';
+// Adds Jumbotron CTA
+$jumbotronbgimg = get_theme_mod('jumbotron_bg_img', '');
+if($jumbotronbgimg !== '') {
+	include 'inc/jumbotron-cta.php';
 }
 
 // Ads Mid Page Slider
@@ -100,7 +90,7 @@ function add_testimonials() {
 				  echo '</ol>
 								<div class="carousel-item active">
 								<img src="' . $testimonials_slider1 . '" alt="vdg law testimonial #1">
-									<div class="carousel-caption d-md-block">
+									<div class="carousel-caption">
 									<h5>' . $testimonials_slider1_title . '</h5>
 									<p>' . $testimonials_slider1_text . '</p>
 									</div>
@@ -110,7 +100,7 @@ function add_testimonials() {
 
 						echo '<div class="carousel-item" >
 									<img src = "' . $testimonials_slider2 . '" alt = "vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5> ' . $testimonials_slider2_title . '</h5>
 										<p> ' . $testimonials_slider2_text . '</p>
 										</div>
@@ -120,7 +110,7 @@ function add_testimonials() {
 					if($testimonials_slider3 !== $default) {
 						echo '<div class="carousel-item" >
 									<img src = "' . $testimonials_slider3 . '" alt = "vdg law testimonial #1" >
-										<div class="carousel-caption d-md-block" >
+										<div class="carousel-caption" >
 										<h5> ' . $testimonials_slider3_title . '</h5 >
 										<p> ' . $testimonials_slider3_text . '</p >
 										</div>
@@ -130,7 +120,7 @@ function add_testimonials() {
 					if($testimonials_slider4 !== $default) {
 						echo '<div class="carousel-item">
 									<img src="' . $testimonials_slider4 . '" alt="vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5>' . $testimonials_slider4_title . '</h5>
 										<p>' . $testimonials_slider4_text . '</p>
 										</div>
@@ -140,7 +130,7 @@ function add_testimonials() {
 					if($testimonials_slider5 !== $default) {
 						echo '<div class="carousel-item">
 									<img src="' . $testimonials_slider5 . '" alt="vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5>' . $testimonials_slider5_title . '</h5>
 										<p>' . $testimonials_slider5_text . '</p>
 										</div>
@@ -150,7 +140,7 @@ function add_testimonials() {
 					if($testimonials_slider6 !== $default) {
 						echo '<div class="carousel-item">
 									<img src="' . $testimonials_slider6 . '" alt="vdg law testimonial #1">
-										<div class="carousel-caption d-md-block">
+										<div class="carousel-caption">
 										<h5>' . $testimonials_slider6_title . '</h5>
 										<p>' . $testimonials_slider6_text . '</p>
 										</div>
@@ -170,35 +160,5 @@ function add_testimonials() {
 						echo	'</div>';
 	}
 }
-
-add_action( 'genesis_before_content', 'add_jumbotron_mid_front_page', 20 );
-function add_jumbotron_mid_front_page() {
-	$jumbotron_bg_img = get_theme_mod('jumbotron_bg_img');
-	$jumbotron_title  = get_theme_mod('jumbotron_title');
-	$jumbotron_text = get_theme_mod('jumbotron_text');
-
-	echo '
-
-	<div id="mid-page-jumbotron">
-	<div class="mid-page jumbotron">
-
-	<picture >
-		<source media="(min-width:800px)" srcset="'. $jumbotron_bg_img .'">
-		<img src="'. $jumbotron_bg_img .'" alt="vdg law" class="jumbotron__background">
-	</picture>
-
-  <div class="container text-white">
-    <h1 class="display-4">'. $jumbotron_title .'</h1>
-    <p class="lead">'. $jumbotron_text .'</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
-  </div>
-</div>
-</div>
-
-
-	';
-}
-
-
 
 genesis();

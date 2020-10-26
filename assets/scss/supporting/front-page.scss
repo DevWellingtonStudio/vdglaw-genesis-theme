@@ -1,6 +1,10 @@
 /** SCSS Front Page
 ---------------------------- */
 
+.parallax-mirror {
+  z-index: 1 !important;
+}
+
 .parallax-window {
   min-height: 1046px;
   background: transparent;
@@ -21,13 +25,26 @@
   top: 40%;
   left: 65%;
   transform: translate(-50%, -50%);
-  h1 {
-	color: $white;
+  transition: .5s;
+  .row {
+	.text-btn-content {
+		.card {
+		  background-color: transparent;
+		  border: none;
+
+		  h1 {
+			color: $white;
+			transition: .5s;
+		  }
+
+		  p {
+			color: $white;
+			transition: .5s;
+		  }
+		}
+	  }
+	}
   }
-  p {
-	color: $white;
-  }
-}
 .testimonial.carousel.slide {
   .carousel-item:after {
 	content: '\A';
@@ -42,6 +59,23 @@
 	object-fit: cover;
 	width: 100%;
   }
+}
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  left: 15%;
+  z-index: 10;
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 #mid-page-jumbotron {
@@ -65,3 +99,114 @@
   z-index: 2;
   position: relative;
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .parallax-window {
+	min-height: 500px;
+	transition: .5s;
+  }
+
+  #fp-parallax-top {
+	.parallax-slider {
+	  img {
+		width: 100% !important;
+		max-width: none;
+		object-fit: cover;
+		height: 550px;
+	  }
+	}
+  }
+  .parallax-content {
+	paddng: 0 $em1;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	max-width: 570px;
+	margin: 0 auto;
+	word-wrap: break-word;
+	transition: .5s;
+	.row {
+	  transition: .5s;
+	  .text-btn-content {
+		button.btn {
+		  margin: 0 auto;
+		  display: block;
+		  transition: .5s;
+		}
+	  }
+	}
+	h1 {
+	  font-size: 1.5rem;
+	  transition: .5s;
+	  text-align: center;
+	}
+	p {
+	  word-wrap: break-word;
+	  font-size: 1.1rem;
+	  transition: .5s;
+	  text-align: center;
+	}
+  }
+
+
+
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .testimonial.carousel.slide {
+	.carousel-item:after {
+	}
+	img {
+	  min-height: 500px;
+	  max-height: 500px;
+	}
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
