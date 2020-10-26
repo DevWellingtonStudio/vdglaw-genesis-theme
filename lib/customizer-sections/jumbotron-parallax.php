@@ -26,6 +26,91 @@ $wp_customize -> add_control (
 		)
 	)
 );
+
+// Parallax 576x314.png 39vw Image
+$wp_customize -> add_setting ( 'parallax_39vw_img', array(
+	'default'           => '',
+	'type'              => 'theme_mod',
+	'transport'         => 'postMessage'
+));
+$wp_customize -> add_control (
+	new WP_Customize_Image_Control (
+		$wp_customize,
+		'parallax_39vw_img',
+		array (
+			'label'             => __('Parallax 39vw Image'),
+			'description'				=> __('Add an image size 576px x 314px'),
+			'section'           => 'parallax',
+			'settings'          => 'parallax_39vw_img',
+			//'priority'          => 10,
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	)
+);
+
+// Parallax 768x418.png 52vw Image
+$wp_customize -> add_setting ( 'parallax_52vw_img', array(
+	'default'           => '',
+	'type'              => 'theme_mod',
+	'transport'         => 'postMessage'
+));
+$wp_customize -> add_control (
+	new WP_Customize_Image_Control (
+		$wp_customize,
+		'parallax_52vw_img',
+		array (
+			'label'             => __('Parallax 52vw Image'),
+			'description'				=> __('Add an image size 768px x 418px'),
+			'section'           => 'parallax',
+			'settings'          => 'parallax_52vw_img',
+			//'priority'          => 10,
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	)
+);
+
+// Parallax 991x540.png 72vw Image
+$wp_customize -> add_setting ( 'parallax_72vw_img', array(
+	'default'           => '',
+	'type'              => 'theme_mod',
+	'transport'         => 'postMessage'
+));
+$wp_customize -> add_control (
+	new WP_Customize_Image_Control (
+		$wp_customize,
+		'parallax_72vw_img',
+		array (
+			'label'             => __('Parallax 72vw Image'),
+			'description'				=> __('Add an image size 991px x 540px'),
+			'section'           => 'parallax',
+			'settings'          => 'parallax_72vw_img',
+			//'priority'          => 10,
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	)
+);
+
+// Parallax 1200x654.png 87vw Image
+$wp_customize -> add_setting ( 'parallax_87vw_img', array(
+	'default'           => '',
+	'type'              => 'theme_mod',
+	'transport'         => 'postMessage'
+));
+$wp_customize -> add_control (
+	new WP_Customize_Image_Control (
+		$wp_customize,
+		'parallax_87vw_img',
+		array (
+			'label'             => __('Parallax 87vw Image'),
+			'description'				=> __('Add an image size 1200px x 654px'),
+			'section'           => 'parallax',
+			'settings'          => 'parallax_87vw_img',
+			//'priority'          => 10,
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	)
+);
+
 // Parallax Title
 $wp_customize->add_setting( 'parallax_title', array(
 	'default'	=>	'',
@@ -85,6 +170,7 @@ $wp_customize->add_section('jumbotron', array(
 	'title' => __('Jumbotron CTA Section', 'vdglaw-theme-genesis'),
 	'priority' => 10
 ));
+
 // Jumbotron Image
 $wp_customize->add_setting('jumbotron_bg_img', array(
 	'default' => '',
@@ -104,6 +190,7 @@ $wp_customize->add_control(
 		)
 	)
 );
+
 // Jumbotron Title
 $wp_customize->add_setting('jumbotron_title', array(
 	'default' => '',
