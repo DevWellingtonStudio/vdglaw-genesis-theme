@@ -1,0 +1,47 @@
+/** SCSS Customizer
+----------------------------------- */
+
+
+/*all pages*/
+
+.narrow-content {
+  width: 70%;
+  align-content: center;
+}
+
+/*h1 headings on featured images*/
+
+.h1-underline {
+  font-size: 55px;
+  text-decoration: underline;
+  text-decoration-color: #EA2340;
+}
+
+/*h3 on contact us form*/
+
+h3-underline {
+  text-decoration: underline;
+  text-decoration-color: #EA2340;
+}
+
+/* Areas of Practice Page*/
+.p-text {
+  font-size: 22px;
+  line-height: 1.75;
+  margin-top: 30px;
+  padding-right: 40px;
+}
+
+/*  Contact Form CSS */
+.vdg-form {
+  padding-right: 100px;
+  padding-left:100px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+/*  narrow width aop */
+#aop-narrow {
+  margin: 0 auto;
+  width: 70%;
+}

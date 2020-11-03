@@ -1,5 +1,42 @@
 /** SCSS Containers
 ----------------------------------- */
+#genesis-content {
+  article {
+	width: 70%;
+	max-width: 2000px;
+	.wp-block-cover.alignwide {
+	  width: 102vw;
+	  position: relative;
+	  left: 50%;
+	  right: 50%;
+	  margin-left: -50vw;
+	  margin-right: -50vw;
+	}
+	.wp-block-group.vdg-form.has-background {
+	  width: 102vw;
+	  position: relative;
+	  left: 50%;
+	  right: 50%;
+	  margin-left: -50vw;
+	  margin-right: -50vw;
+	}
+  }
+}
+.content-narrow {
+  width: 80%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.page, .blog {
+  .site-container {
+	.site-inner {
+	  .wrap.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	  }
+	}
+  }
+}
 .post-template-default.single {
   .site-container {
 	.wrap {
