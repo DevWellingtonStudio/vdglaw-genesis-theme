@@ -122,6 +122,10 @@
   }
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  background-color: red;
+}
+
 /* Move navigation below wp-admin bar */
 .logged-in {
     .navbar-fixed-top {
