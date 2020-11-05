@@ -116,6 +116,11 @@
 .no-js .menu-item-has-children:focus .dropdown-menu {
     display: block;
 }
+.dropdown-menu {
+  li a {
+	color: $black !important;
+  }
+}
 
 /* Move navigation below wp-admin bar */
 .logged-in {
