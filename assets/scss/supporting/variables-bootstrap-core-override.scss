@@ -23,3 +23,13 @@ $fa-font-path: "assets/fonts/fontawesome";
   color: red;
   text-decoration: none;
 }
+.entry-categories a,
+.entry-categories a:hover {
+  color: red;
+  text-decoration: red;
+}
+.entry-tags a,
+.entry-tags a:hover {
+  color: red;
+  text-decoration: none;
+}
