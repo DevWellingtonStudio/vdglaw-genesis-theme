@@ -12,14 +12,14 @@ function add_jumbotron_blog_page()
 
 	if ($isPost && has_post_thumbnail()) {
 
-		echo '<div id="blog-jumbotron" class="blog jumbotron jumbotron-fluid" style="background-image: url(' . $jumbotron_img . ');">
-
-							<div class="container">
-								<h1 class="display-4">' . $blog_jumbotron_title . '</h1>
-								<p class="lead">' . $blog_jumbotron_content . '</p>
-							</div>
-							</div> ';
-
+					echo '<div id="blog-jumbotron" class="blog jumbotron jumbotron-fluid" style="background-image: url(' . $jumbotron_img . ');">
+								<div class="container">';
+					if($blog_jumbotron_title !== $default) {
+						echo '<h1 class="display-4">' . $blog_jumbotron_title . '</h1>
+									<p class="lead">' . $blog_jumbotron_content . '</p>';
+					}
+					echo '</div>
+								</div> ';
 	} else {
 		return $default;
 	}
