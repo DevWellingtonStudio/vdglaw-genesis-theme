@@ -1,6 +1,6 @@
 <?php
 
-add_action('genesis_after_header', 'add_jumbotron_blog_page', 15);
+add_action('genesis_before_content_sidebar_wrap', 'add_jumbotron_blog_page', 15);
 function add_jumbotron_blog_page()
 {
 	$jumbotron_img = get_the_post_thumbnail_url( $post->ID, 'full' );
