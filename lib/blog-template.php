@@ -11,7 +11,7 @@ function add_jumbotron_blog_template() {
 	$blog_title	= get_theme_mod('blog_title');
 	$blog_text	= get_theme_mod('blog_text');
 
-	if(!empty($blog_jumbo_img)) {
+	if(!empty($blog_jumbo_img) && is_home()) {
 		echo '
 		<div id="blog-loop-jumbotron" class="jumbotron jumbotron-fluid" style="background-image: url(' . $blog_jumbo_img . ');">
 			<div class="container">
