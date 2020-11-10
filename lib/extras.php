@@ -15,11 +15,11 @@
 add_filter( 'the_content', 'bfg_image_responsive_class' );
 function bfg_image_responsive_class( $content ) {
    global $post;
-   
+
    $pattern ="/<img(.*?)class=\"(.*?)\"(.*?)>/i";
    $replacement = '<img$1class="$2 img-fluid"$3>';
    $content = preg_replace( $pattern, $replacement, $content );
-   
+
    return $content;
 }
 
@@ -120,3 +120,11 @@ add_filter( 'get_custom_logo', function( $html ) {
 
     return $html;
 }, 10 );
+
+// Removes Title on Home/Blog Page
+add_action( 'get_header', 'remove_titles_from_pages' );
+function remove_titles_from_pages() {
+	if ( is_home() ) {
+		remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_headline', 10 );
+	}
+}

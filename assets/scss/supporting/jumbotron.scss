@@ -9,6 +9,35 @@
     }
 }
 
+#blog-jumbotron,
+#blog-loop-jumbotron {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 -20px 1.618em -20px;
+  &:before {
+	content: "";
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	background: rgba(0,0,0,.5);
+  }
+  .container {
+	h1, p {
+	  color: $white;
+	  text-align: center;
+	}
+	p:after {
+	  content: "";
+	  display: block;
+	  width: 160px;
+	  height: 100%;
+	  margin: 1em auto;
+	  border: 2px solid red;
+	}
+  }
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {}
 
@@ -19,7 +48,11 @@
 @media (min-width: 992px) {}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  #blog-loop-jumbotron.jumbotron {
+	padding: 26rem 2rem;
+  }
+}
 
 
 
