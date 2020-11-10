@@ -16,6 +16,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 	include 'customizer-sections/jumbotron-parallax.php';
 	include 'customizer-sections/fp-mid-slider-options.php';
 	include 'customizer-sections/testimonials-customizer.php';
+	include 'customizer-sections/blog-customizer.php';
 
     // Add Default Settings
     $wp_customize->add_setting( 'vdglaw-theme-genesis', array(
