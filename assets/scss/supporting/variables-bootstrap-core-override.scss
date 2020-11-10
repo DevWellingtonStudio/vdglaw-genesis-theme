@@ -1,3 +1,35 @@
 $enable-flex: true;
 
 $fa-font-path: "assets/fonts/fontawesome";
+
+.entry-title a {
+  color: red !important;
+  &:hover {
+	text-decoration: none;
+  }
+}
+.entry-author-link,
+.entry-author-link:hover {
+  color: red;
+  text-decoration: none;
+}
+.entry-comments-link a,
+.entry-comments-link a:hover {
+  color: red;
+  text-decoration: none;
+}
+.wp-block-column p a,
+.wp-block-column p a:hover {
+  color: red;
+  text-decoration: none;
+}
+.entry-categories a,
+.entry-categories a:hover {
+  color: red;
+  text-decoration: red;
+}
+.entry-tags a,
+.entry-tags a:hover {
+  color: red;
+  text-decoration: none;
+}

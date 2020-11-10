@@ -103,3 +103,11 @@ function bfg_childtheme_setup() {
 add_action( 'after_setup_theme', function() {
 	require_once( CHILD_DIR . '/lib/modules/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php' );
 } );
+
+//add_action('init','run_action_jumbo_tron', 999);
+function run_action_jumbo_tron() {
+	global $post;
+	if( is_single()) {
+		add_action( 'genesis_after_header', 'add_jumbotron_mid_front_page', 15 );
+	}
+}

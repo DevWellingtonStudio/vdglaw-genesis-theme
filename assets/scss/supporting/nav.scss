@@ -116,6 +116,19 @@
 .no-js .menu-item-has-children:focus .dropdown-menu {
     display: block;
 }
+.dropdown-menu {
+  li a {
+	color: $black !important;
+  }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: red;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: red;
+}
 
 /* Move navigation below wp-admin bar */
 .logged-in {

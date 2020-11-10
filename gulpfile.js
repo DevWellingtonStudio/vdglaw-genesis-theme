@@ -44,7 +44,7 @@ var paths = {
         dest: 'languages/vdglaw-theme-genesis.pot'
     },
     site: {
-        url: 'https://vdg.local'
+        url: 'https://vdglaw.local'
     }
 }
 
