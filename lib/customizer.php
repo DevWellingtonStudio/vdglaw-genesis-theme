@@ -118,7 +118,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 	));
 	$wp_customize->add_control( 'icons-images-content', array(
 		'label'	=>	__('Image/Icon Area', 'vdglaw-theme-genesis' ),
-		'description'	=> __('Used in conjunction with Short Codes To Menu plugin. Shortcode is [icons-images] https://wordpress.org/plugins/shortcode-in-menus/', 'vdglaw-theme-genesis' ),
+		'description'	=> __('Used in conjunction with Short Codes To Menu plugin. Shortcode is [icons-images] https://wordpress.org/plugins/shortcode-in-menus/. Also, add the class "break" to the shortcode menu item.', 'vdglaw-theme-genesis' ),
 		'section'	=>	'navigation',
 		'settings'	=>	'icons-images-content',
 		'type'	=> 'textarea'
