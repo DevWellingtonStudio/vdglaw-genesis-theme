@@ -1,9 +1,37 @@
 /* Navbar
 ----------------------------------------------------------------------------- */
 
+.nav-icons-images {
+	.nav-icons-images-wrap {
+		float: right;
+		img {
+			transition: 0.5s;
+			width: 150px;
+		}
+	}
+}
 .break {
 	flex-basis: 100%;
 	height: 0;
+	width: 0;
+}
+.scrolled {
+	.wrap {
+		#nav-primary {
+			.navbar-nav {
+				.break {
+					transition: 0.5s;
+					flex-basis: initial;
+					height: auto;
+					width: auto;
+					img {
+						width: 50px;
+						transition: 0.5s;
+					}
+				}
+			}
+		}
+	}
 }
 .bg-dark {
   background-color: #1C1D24;
