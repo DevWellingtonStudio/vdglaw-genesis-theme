@@ -244,6 +244,51 @@
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+
+	.nav-icons-images {
+		.nav-icons-images-wrap {
+			float: none;
+			img {
+				transition: 0.5s;
+				width: 80px;
+			}
+		}
+	}
+	.break {
+		flex-basis: initial;
+		height: auto;
+		width: auto;
+	}
+	.scrolled {
+		.wrap {
+			#nav-primary {
+				.navbar-nav {
+					.break {
+						transition: 0.5s;
+						flex-basis: initial;
+						height: auto;
+						width: auto;
+						img {
+							width: 80px;
+							transition: 0.5s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
   .page-template-default .navbar-clear .navbar-nav .nav-link {
 	color: $white;
   }
