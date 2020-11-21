@@ -110,6 +110,24 @@ add_action( 'customize_register', function( $wp_customize ) {
         )
     ) );
 
+	// Nav Icon/Image Area
+	$wp_customize->add_setting( 'icons-images-content', array(
+		'default'	=>	'',
+		'type'	=> 'theme_mod',
+		'sanitize_callback'	=>	'wp_kses_post'
+	));
+	$wp_customize->add_control( 'icons-images-content', array(
+		'label'	=>	__('Image/Icon Area', 'vdglaw-theme-genesis' ),
+		'description'	=> __('Used in conjuction with Short Codes To Menu plugin. https://wordpress.org/plugins/shortcode-in-menus/', 'vdglaw-theme-genesis' ),
+		'section'	=>	'navigation',
+		'settings'	=>	'icons-images-content',
+		'type'	=> 'textarea'
+	));
+
+
+
+
+
     // Container Layout
     $wp_customize->add_section( 'container-layout', array(
         'title' => __( 'Container Layout', 'vdglaw-theme-genesis' ),
