@@ -267,7 +267,7 @@
 						height: auto;
 						width: auto;
 						img {
-							width: 80px;
+							width: 50px;
 							transition: 0.5s;
 						}
 					}
@@ -294,6 +294,10 @@
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+
+  .nav-icons-images .nav-icons-images-wrap img {
+	width: 50px;
+  }
 
 }
 
