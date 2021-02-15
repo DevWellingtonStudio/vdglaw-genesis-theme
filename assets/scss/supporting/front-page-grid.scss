@@ -35,7 +35,7 @@
 
 .fpa-more-link {
   text-align: center;
-  width: 55%;
+  width: 100%;
   margin: 0 auto;
   a {
 	border: 1.2px solid $black;
@@ -72,10 +72,22 @@
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+  .footer-widgets {
+	padding: 2rem 2rem;
+  }
   .widget-two {
+	width: 100%;
 	section.featured-content {
 	  width: 100%;
 	  float: none;
+	  article {
+		.entry-content {
+		  padding:0 0.8em 4em;
+		}
+	  }
+	}
+	.fpa-more-link {
+	  width: 100%;
 	}
   }
 }
