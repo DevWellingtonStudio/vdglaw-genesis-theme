@@ -19,7 +19,7 @@ function add_parallax_front_page() {
 		echo '<div id="fp-parallax-top" class="parallax-window">
 					<div class="parallax-slider">
 					<!--<img src="" style="width:100%;" srcset="/img/hero-576x314.png 39vw, /img/hero-768x418.png 52vw, /img/hero-991x540.png 72vw, /img/hero-1200x654.png 87vw" sizes="100vw"> -->
-					<img src="' . $parallax_bg_img . '" style="width:100%;" srcset="'. $parallax_39vw_img .' 39vw, '. $parallax_52vw_img .' 52vw, '. $parallax_72vw_img .' 72vw, '. $parallax_87vw_img .' 87vw" sizes="100vw">
+					<img style="width:100%;" srcset="'. $parallax_bg_img .' 100vw, '. $parallax_39vw_img .' 39vw, '. $parallax_52vw_img .' 52vw, '. $parallax_72vw_img .' 72vw, '. $parallax_87vw_img .' 87vw" sizes="100vw" src="'. $parallax_bg_img .'">
 					<div class="parallax-content container">
 					    <div class="row">
 					      <div class="text-btn-content col-lg-6 offset-lg-4 offset-xl-5">

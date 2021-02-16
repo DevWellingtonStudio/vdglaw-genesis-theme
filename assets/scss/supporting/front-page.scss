@@ -192,8 +192,47 @@
 
 
 
-// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {}
+
 @media (max-width: 575.98px) {
+
+  .front-page {
+	.site-inner {
+	  padding-top: 1em;
+	}
+  }
+  .parallax-window {
+	min-height: 350px;
+	transition: 0.5s;
+  }
+
+  #fp-parallax-top {
+	.parallax-slider {
+	  img {
+		height: 320px;
+		transition: 0.5s;
+	  }
+	}
+  }
+
+  .parallax-content {
+	  top: 24%;
+	h1 {
+	  font-size: 1rem;
+	}
+	p {
+	  font-size: 0.8rem;
+	}
+	button.btn.btn-outline-light {
+	  font-size: 0.5rem;
+	}
+  }
+
+
   .testimonial.carousel.slide {
 	.carousel-item:after {
 	}
@@ -204,11 +243,8 @@
   }
 }
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {}
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {}
+@media (max-width: 320.98px) {
+  .parallax-content {
+	top: 30%;
+  }
+}
