@@ -34,8 +34,9 @@ if($jumbotronbgimg !== '') {
 // Ads Mid Page Slider
 add_action( 'genesis_after_header', 'mid_page_slider', 20 );
 function mid_page_slider() {
+	$default = '';
 	$firstImage = get_theme_mod('wst_mid_slider1');
-	if($firstImage !== '') {
+	if($firstImage !== $default) {
 		include 'inc/fp-mid-slider.php';
 	}
 }

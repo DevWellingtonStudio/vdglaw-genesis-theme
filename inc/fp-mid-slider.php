@@ -19,8 +19,8 @@ $wst_mid_slider6	= get_theme_mod('wst_mid_slider6', $default);
 $midslider6title	= get_theme_mod('midslider6title', $default);
 $midsldr6text		  = get_theme_mod('midsldr6text', $default);
 
+if($wst_mid_slider1 !== $default) {
 ?>
-
 <div class="container-fluid mid-slider-container">
 	<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -111,3 +111,4 @@ $midsldr6text		  = get_theme_mod('midsldr6text', $default);
 		</a>
 	</div>
 </div>
+<?php } ?>
